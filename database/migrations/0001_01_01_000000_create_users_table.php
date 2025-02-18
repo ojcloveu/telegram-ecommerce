@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
 
-            $table->bigInteger('telegram_id')->unique(); // Telegram User ID
-            $table->string('first_name');
+            $table->bigInteger('telegram_id')->unique()->nullable(); // Telegram User ID
+            $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('username')->nullable();
             $table->string('phone')->nullable();
