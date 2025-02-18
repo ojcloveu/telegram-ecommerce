@@ -15,6 +15,8 @@ Route::get('/user', function (Request $request) {
 Route::post('/telegram/register', [TelegramAuthController::class, 'register']);
 Route::post('/telegram/authenticate', [TelegramAuthController::class, 'authenticate']);
 
+Route::post('/telegram/webhook', [TelegramController::class, 'handleWebhook']);
+
 
 
 Route::get('/products', [ProductController::class, 'index']);
